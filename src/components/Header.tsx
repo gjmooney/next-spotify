@@ -2,8 +2,10 @@
 
 import { useRouter } from "next/navigation";
 import { FC, ReactNode } from "react";
-import { twMerge } from "tailwind-merge";
+import { BiSearch } from "react-icons/bi";
+import { HiHome } from "react-icons/hi";
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
+import { twMerge } from "tailwind-merge";
 
 interface HeaderProps {
   children: ReactNode;
@@ -37,6 +39,15 @@ const Header: FC<HeaderProps> = ({ children, className }) => {
             className="rounded-full bg-black flex items-center justify-center hover:opacity-75 transition"
           >
             <RxCaretRight className="text-white" size={35} />
+          </button>
+        </div>
+
+        <div className="flex md:hidden gap-x-2 items-center">
+          <button className="rounded-full p-2 bg-white flex items-center justify-center hover:opacity-75 transition">
+            <HiHome className="text-black" size={20} />
+          </button>
+          <button className="rounded-full p-2 bg-white flex items-center justify-center hover:opacity-75 transition">
+            <BiSearch className="text-black" size={20} />
           </button>
         </div>
       </div>
