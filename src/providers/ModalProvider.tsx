@@ -3,6 +3,7 @@
 import { FC, useEffect, useState } from "react";
 
 import AuthModal from "@/components/AuthModal";
+import UploadModal from "@/components/UploadModal";
 
 interface ModalProviderProps {}
 
@@ -21,6 +22,7 @@ const ModalProvider: FC<ModalProviderProps> = ({}) => {
   return (
     <>
       <AuthModal />
+      <UploadModal />
     </>
   );
 };
