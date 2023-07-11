@@ -1,6 +1,7 @@
 import ModalProvider from "@/providers/ModalProvider";
 import SupabaseProvider from "@/providers/SupabaseProvider";
 import UserProvider from "@/providers/UserProvider";
+import ToastProvider from "@/providers/ToastProvider";
 
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={figtree.className}>
+        <ToastProvider />
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider />
