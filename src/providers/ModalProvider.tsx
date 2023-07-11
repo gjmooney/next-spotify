@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from "react";
 
-import Modal from "@/components/Modal";
+import AuthModal from "@/components/AuthModal";
 
 interface ModalProviderProps {}
 
@@ -20,14 +20,7 @@ const ModalProvider: FC<ModalProviderProps> = ({}) => {
 
   return (
     <>
-      <Modal
-        title="Test Modal"
-        description="test dec"
-        isOpen
-        onChange={() => {}}
-      >
-        Test Children
-      </Modal>
+      <AuthModal />
     </>
   );
 };
