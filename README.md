@@ -2,4 +2,4 @@
 
 Full stack Spotify clone using Next.js, Tailwind CSS, Supabase, Stripe
 
-libraries: react-icons, tailwind-merge
+libraries: react-icons, tailwind-merge, Radix (for modal)
