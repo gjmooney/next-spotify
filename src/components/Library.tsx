@@ -5,6 +5,7 @@ import { Song } from "@/types/types";
 import { FC } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { TbPlaylist } from "react-icons/tb";
+import MediaItem from "./MediaItem";
 
 interface LibraryProps {
   songs: Song[];
@@ -40,7 +41,7 @@ const Library: FC<LibraryProps> = ({ songs }) => {
       </div>
       <div className="flex flex-col gap-y-2 mt4 px-3">
         {songs.map((song) => (
-          <div key={song.id}>{song.title}</div>
+          <MediaItem key={song.id} onClick={() => {}} data={song} />
         ))}
       </div>
     </div>
