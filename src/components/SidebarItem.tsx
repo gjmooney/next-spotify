@@ -26,7 +26,7 @@ const SidebarItem: FC<SidebarItemProps> = ({
     >
       <Icon size={26} />
       <p>
-        <label className="truncate w-full">{label}</label>
+        <label className="truncate w-full cursor-pointer">{label}</label>
       </p>
     </Link>
   );
