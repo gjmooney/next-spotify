@@ -1,3 +1,5 @@
+"use client";
+
 import { User } from "@supabase/auth-helpers-nextjs";
 
 import { Subscription, UserDetails } from "@/types/types";
