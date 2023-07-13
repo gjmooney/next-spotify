@@ -4,10 +4,14 @@ import { FC, useEffect, useState } from "react";
 
 import AuthModal from "@/components/AuthModal";
 import UploadModal from "@/components/UploadModal";
+import { ProductWithPrice } from "@/types/types";
+import SubscribeModal from "@/components/SubscribeModal";
 
-interface ModalProviderProps {}
+interface ModalProviderProps {
+  products: ProductWithPrice[];
+}
 
-const ModalProvider: FC<ModalProviderProps> = ({}) => {
+const ModalProvider: FC<ModalProviderProps> = ({ products }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   //prevent rendering modal server side
@@ -23,6 +27,7 @@ const ModalProvider: FC<ModalProviderProps> = ({}) => {
     <>
       <AuthModal />
       <UploadModal />
+      <SubscribeModal products={products} />
     </>
   );
 };
